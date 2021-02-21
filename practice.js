@@ -2,7 +2,7 @@
 Array.prototype.myMap = function(callback){
     const newArray = [];
     for(let i = 0; i < this.length; i++){
-        newArray.push(callback(this[i]));
+        newArray.push(callback(this[i])); //Add the mapped elements to the new array
     }
     return newArray;
 }
@@ -25,7 +25,7 @@ Array.prototype.myReduce = function(callback, num = 0){
     for(let i = 0; i < this.length; i++){
         result += this[i];
     }
-    result = callback(result, num);
+    result = callback(result, num); //Add the extra number to our result
     return result;
 }
 
@@ -43,7 +43,7 @@ console.log(array1.myReduce(reducer, 5)); //output: 15
 //#10 lastIndexOf()
 Array.prototype.myLastIndexOf = function(target){
     let index = -1
-    for(let i = this.length; i >= 0; i--){
+    for(let i = this.length; i >= 0; i--){ //Go through the array backwards
         if(this[i] == target){
             return i;
         }
