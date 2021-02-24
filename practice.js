@@ -57,3 +57,47 @@ const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
 console.log(animals.myLastIndexOf('Dodo')); //output: 3
 console.log(animals.myLastIndexOf('Tiger')); //output: 1
 */
+
+//
+// #3 Array.prototype.filter
+//
+function myFilter(arr, length) {
+  let temparr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > length) {
+      temparr.push(arr[i]);
+    }
+  }
+  return temparr;
+}
+
+
+//
+//#7 Array.prototype.includes
+//
+function myIncludes(arr, num) {
+  let bool = false;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === num) {
+      bool = true;
+      break;
+    } else {
+      continue;
+    }
+  }
+  return bool;
+}
+
+
+//
+//#11 Object.keys()
+//
+function grabkeys(obj) {
+  let temparr = [];
+
+  for (key in obj) {
+    temparr.push(key);
+  }
+  return temparr;
+}
